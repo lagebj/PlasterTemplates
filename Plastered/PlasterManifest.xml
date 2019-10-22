@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plasterManifest
+  schemaVersion="1.1"
+  templateType="Item" xmlns="http://www.microsoft.com/schemas/PowerShell/Plaster/v1">
+  <metadata>
+    <name>Plastered</name>
+    <id>0822670c-7765-4634-8bd0-e22672a70a7e</id>
+    <version>0.0.1</version>
+    <title>Plastered</title>
+    <description></description>
+    <author>Lage Berger Jensen</author>
+    <tags></tags>
+  </metadata>
+  <parameters></parameters>
+  <content></content>
+</plasterManifest>
