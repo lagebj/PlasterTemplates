@@ -11,62 +11,48 @@
     <author>Lage Berger Jensen</author>
     <tags></tags>
   </metadata>
-  <parameters>  
-    <parameter name='ModuleName' type='text' prompt='Name of the module' default='${PLASTER_DestinationName}'/>
-    <parameter name='ModuleDesc' type='text' prompt='Short description of this module'/>
-    <parameter name='ModuleVersion' type='text' default='0.0.1' prompt='Enter the version number for the module'/>
-    <parameter name='ModuleAuthor' type='user-fullname' prompt="Module authors' name"/>
+  <parameters>
+    <parameter name="FullName" type="text" prompt="Module author's name" />
+    <parameter name="ModuleName" type="text" prompt="Name of your module" />
+    <parameter name="ModuleDesc" type="text" prompt="Brief description on this module" />
+    <parameter name="Version" type="text" prompt="Initial module version" default="0.0.1" />
+    <parameter name="GitHubUserName" type="text" prompt="GitHub username" default="${PLASTER_PARAM_FullName}"/>
+    <parameter name="GitHubRepo" type="text" prompt="Github repo name for this module" default="${PLASTER_PARAM_ModuleName}"/>
   </parameters>
   <content>
     <message>
       Creating folder structure
     </message>
-    <file source='' destination='demos'/>
-    <file source='' destination='docs\images'/>
-    <file source='' destination='tests'/>
-    <file source='' destination='spec'/>
-    <file source='' destination='tests'/>
+    <file source='' destination='build'/>
+    <file source='' destination='docs\cab'/>
+    <file source='' destination='docs\locales'/>
+    <file source='' destination='docs\markdown'/>
+    <file source='' destination='tests\output'/>
     <file source='' destination='.vscode'/>
-    <file source='' destination='${PLASTER_PARAM_ModuleName}\public'/>
-    <file source='' destination='${PLASTER_PARAM_ModuleName}\private'/>
-    <file source='' destination='${PLASTER_PARAM_ModuleName}\classes'/>
-    <file source='' destination='${PLASTER_PARAM_ModuleName}\data'/>
+    <file source='' destination='scripts'/>
+    <file source='' destination='classes'/>
     <message>
       Deploying files
     </message>
-    <file source='.vsts-ci.yml' destination=''/>
     <templateFile source='appveyor.yml' destination=''/>
-    <file source='build.depend.psd1' destination=''/>
-    <file source='build.ps1' destination=''/>
-    <file source='deploy.PSDeploy.ps1' destination=''/>
-    <file source='test.depend.psd1' destination=''/>
+    <file source='build\Module.Build.Depend.psd1' destination='build\${PLASTER_PARAM_ModuleName}.Build.Depend.psd1'/>
+    <file source='build\Module.Build.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.ps1'/>
+    <file source='build\Module.Deploy.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Deploy.ps1'/>
+    <templateFile source='build\Module.Build.Settings.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.Settings.ps1'/>
+    <templateFile source='build\Module.Build.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.ps1'/>
     <file source='.gitignore' destination=''/>
     <file source='.vscode\launch.json' destination=''/>
-	  <file source='.vscode\PSScriptAnalyzerSettings.psd1' destination=''/>
+    <templatefile source='.vscode\tasks.json' destination=''/>
+	  <file source='.vscode\ScriptAnalyzerSettings.psd1' destination=''/>
     <file source='.vscode\settings.json' destination=''/>
-    <file source='spec\module.Steps.ps1' destination=''/>
-    <templateFile source='mkdocs.yml' destination=''/>
-    <templateFile source='PITCHME.md' destination=''/>
-    <templateFile source='readme.md' destination=''/>
+    <templateFile source='README.md' destination=''/>
     <templateFile source='LICENSE' destination=''/>
-    <file source='module.build.ps1' destination=''/>
-    <file source='demos\run-compiled.bat' destination=''/>
-    <templateFile source='demos\run-compiled.ps1' destination=''/>
-    <file source='demos\run-sources.bat' destination=''/>
-    <templateFile source='demos\run-sources.ps1' destination=''/>
-    <file source='demos\Set-PSModulePath.ps1' destination=''/>
     <templateFile source='docs\about.md' destination=''/>
     <templateFile source='docs\acknowledgements.md' destination=''/>
     <templateFile source='docs\index.md' destination=''/>
     <templateFile source='docs\Quick-Start-Installation-and-Example.md' destination=''/>
-    <templateFile source='tests\Project.Tests.ps1' destination=''/>
-    <templateFile source='tests\Help.Tests.ps1' destination=''/>
-    <templateFile source='tests\Feature.Tests.ps1' destination=''/>
-    <templateFile source='tests\Regression.Tests.ps1' destination=''/>
-    <templateFile source='tests\Unit.Tests.ps1' destination=''/>
-    <templateFile source='tests\Unload-SUT.ps1' destination=''/>
-    <templateFile source='spec\module.feature' destination=''/>
-    <file source='module\module.psm1' destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psm1'/>
-    <templateFile source='module\module.psd1' destination='${PLASTER_PARAM_ModuleName}\${PLASTER_PARAM_ModuleName}.psd1'/>  
+    <templateFile source='tests\Module.Tests.ps1' destination='tests\${PLASTER_PARAM_ModuleName}.Tests.ps1'/>
+    <file source='Module.psm1' destination='${PLASTER_PARAM_ModuleName}.psm1'/>
+    <templateFile source='Module.psd1' destination='${PLASTER_PARAM_ModuleName}.psd1'/>
   </content>
 </plasterManifest>
