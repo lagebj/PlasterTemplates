@@ -35,6 +35,7 @@
       Deploying files
     </message>
     <templateFile source='appveyor.yml' destination=''/>
+    <templateFile source='mkdocs.yml' destination=''/>
     <file source='build\Module.Build.Depend.psd1' destination='build\${PLASTER_PARAM_ModuleName}.Build.Depend.psd1'/>
     <file source='build\Module.Build.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.ps1'/>
     <templateFile source='build\Module.Build.Settings.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.Settings.ps1'/>
