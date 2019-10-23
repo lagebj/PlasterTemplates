@@ -42,7 +42,7 @@
     <templateFile source='build\Module.Build.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.ps1'/>
     <file source='.gitignore' destination=''/>
     <file source='.vscode\launch.json' destination=''/>
-    <templatefile source='.vscode\tasks.json' destination=''/>
+    <templateFile source='.vscode\tasks.json' destination=''/>
 	  <file source='.vscode\ScriptAnalyzerSettings.psd1' destination=''/>
     <file source='.vscode\settings.json' destination=''/>
     <templateFile source='README.md' destination=''/>
