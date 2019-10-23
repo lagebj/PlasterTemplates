@@ -34,13 +34,13 @@
         {
             "label": "Clean",
             "type": "shell",
-            "command": "Invoke-psake .\\build\\Nmh.Ps.PasswordManagement.Build.ps1 -taskList Clean",
+            "command": "Invoke-psake .\\build\\<%= $PLASTER_PARAM_ModuleName %>.Build.ps1 -taskList Clean",
             "problemMatcher": []
         },
         {
             "label": "Build",
             "type": "shell",
-            "command": "Invoke-psake .\\build\\Nmh.Ps.PasswordManagement.Build.ps1 -taskList Build",
+            "command": "Invoke-psake .\\build\\<%= $PLASTER_PARAM_ModuleName %>.Build.ps1 -taskList Build",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -50,25 +50,25 @@
         {
             "label": "BuildHelp",
             "type": "shell",
-            "command": "Invoke-psake .\\build\\Nmh.Ps.PasswordManagement.Build.ps1 -taskList BuildHelp",
+            "command": "Invoke-psake .\\build\\<%= $PLASTER_PARAM_ModuleName %>.Build.ps1 -taskList BuildHelp",
             "problemMatcher": []
         },
         {
             "label": "Analyze",
             "type": "shell",
-            "command": "Invoke-psake .\\build\\Nmh.Ps.PasswordManagement.Build.ps1 -taskList Analyze",
+            "command": "Invoke-psake .\\build\\<%= $PLASTER_PARAM_ModuleName %>.Build.ps1 -taskList Analyze",
             "problemMatcher": []
         },
         {
             "label": "Install",
             "type": "shell",
-            "command": "Invoke-psake .\\build\\Nmh.Ps.PasswordManagement.Build.ps1 -taskList Install",
+            "command": "Invoke-psake .\\build\\<%= $PLASTER_PARAM_ModuleName %>.Build.ps1 -taskList Install",
             "problemMatcher": []
         },
         {
             "label": "Publish",
             "type": "shell",
-            "command": "Invoke-psake .\\build\\Nmh.Ps.PasswordManagement.Build.ps1 -taskList Publish",
+            "command": "Invoke-psake .\\build\\<%= $PLASTER_PARAM_ModuleName %>.Build.ps1 -taskList Publish",
             "problemMatcher": []
         },
         {
