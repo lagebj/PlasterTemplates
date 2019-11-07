@@ -40,6 +40,7 @@
     <templateFile source='Module.psd1' destination='${PLASTER_PARAM_ModuleName}.psd1'/>
     <file source='Module.psm1' destination='${PLASTER_PARAM_ModuleName}.psm1'/>
     <templateFile source='README.md' destination=''/>
+    <templateFile source='ReleaseNotes.md' destination=''/>
     <file source='.vscode\launch.json' destination=''/>
     <file source='.vscode\settings.json' destination=''/>
     <templateFile source='.vscode\tasks.json' destination=''/>

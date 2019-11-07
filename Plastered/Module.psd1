@@ -4,11 +4,11 @@
 
 @{
     RootModule        = '<%= $PLASTER_PARAM_ModuleName %>.psm1'
-    ModuleVersion     = '0.1.0'
+    ModuleVersion     = '1.0.0'
     GUID              = '<%= $PLASTER_Guid1 %>'
     Author            = '<%= $PLASTER_PARAM_FullName %>'
     CompanyName       = ''
-    Copyright         = '(c) <%= $PLASTER_PARAM_FullName %>. All rights reserved.'
+    Copyright         = '(c) 2019 <%= $PLASTER_PARAM_FullName %>. All rights reserved.'
     Description       = '<%= $PLASTER_PARAM_Description %>'
     FunctionsToExport = @()
     CmdletsToExport   = @()
@@ -33,10 +33,10 @@
     PrivateData       = @{
         PSData = @{
             # Tags = @()
-            # LicenseUri = ''
-            # ProjectUri = ''
+            LicenseUri = 'https://github.com/<%= $PLASTER_PARAM_GitHubUserName %>/<%= $PLASTER_PARAM_ModuleName %>/blob/master/LICENSE'
+            ProjectUri = 'https://github.com/<%= $PLASTER_PARAM_GitHubUserName %>/<%= $PLASTER_PARAM_ModuleName %>'
             # IconUri = ''
-            # ReleaseNotes = ''
+            ReleaseNotes = 'https://github.com/<%= $PLASTER_PARAM_GitHubUserName %>/<%= $PLASTER_PARAM_ModuleName %>/blob/master/ReleaseNotes.md'
         }
     }
     # HelpInfoURI = ''
