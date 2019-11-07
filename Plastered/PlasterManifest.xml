@@ -29,6 +29,8 @@
     <file source='' destination='docs'/>
     <file source='' destination='release'/>
     <file source='' destination='scripts'/>
+    <file source='' destination='scripts\private'/>
+    <file source='' destination='scripts\public'/>
     <file source='' destination='tests'/>
     <message>
       Deploying files
