@@ -23,37 +23,37 @@
     <message>
       Creating folder structure
     </message>
-    <file source='' destination='build'/>
-    <file source='' destination='docs\cab'/>
-    <file source='' destination='docs\locales'/>
-    <file source='' destination='docs\markdown'/>
-    <file source='' destination='tests\output'/>
     <file source='' destination='.vscode'/>
-    <file source='' destination='scripts'/>
+    <file source='' destination='build'/>
     <file source='' destination='classes'/>
+    <file source='' destination='docs'/>
+    <file source='' destination='release'/>
+    <file source='' destination='scripts'/>
+    <file source='' destination='scripts\private'/>
+    <file source='' destination='scripts\public'/>
+    <file source='' destination='tests'/>
     <message>
       Deploying files
     </message>
-    <templateFile source='appveyor.yml' destination=''/>
-    <templateFile source='mkdocs.yml' destination=''/>
-    <file source='build\Module.Build.Depend.psd1' destination='build\${PLASTER_PARAM_ModuleName}.Build.Depend.psd1'/>
-    <file source='build\Module.Build.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.ps1'/>
-    <file source='build\Invoke-Build.ps1' destination=''/>
-    <templateFile source='build\Module.Build.Settings.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.Settings.ps1'/>
-    <templateFile source='build\Module.Build.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.ps1'/>
     <file source='.gitignore' destination=''/>
-    <file source='.vscode\launch.json' destination=''/>
-    <templateFile source='.vscode\tasks.json' destination=''/>
-	  <file source='build\ScriptAnalyzerSettings.psd1' destination=''/>
-    <file source='.vscode\settings.json' destination=''/>
-    <templateFile source='README.md' destination=''/>
+    <templateFile source='appveyor.yml' destination=''/>
     <templateFile source='LICENSE' destination=''/>
+    <templateFile source='mkdocs.yml' destination=''/>
+    <templateFile source='Module.psd1' destination='${PLASTER_PARAM_ModuleName}.psd1'/>
+    <file source='Module.psm1' destination='${PLASTER_PARAM_ModuleName}.psm1'/>
+    <templateFile source='README.md' destination=''/>
+    <templateFile source='ReleaseNotes.md' destination=''/>
+    <file source='.vscode\launch.json' destination=''/>
+    <file source='.vscode\settings.json' destination=''/>
+    <templateFile source='.vscode\tasks.json' destination=''/>
+    <templateFile source='build\Invoke-Build.ps1' destination=''/>
+    <templateFile source='build\Module.Build.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.ps1'/>
+    <templateFile source='build\Module.Build.Settings.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.Settings.ps1'/>
+	  <file source='build\ScriptAnalyzerSettings.psd1' destination=''/>
     <templateFile source='docs\about.md' destination=''/>
     <templateFile source='docs\acknowledgements.md' destination=''/>
     <templateFile source='docs\index.md' destination=''/>
     <templateFile source='docs\Quick-Start-Installation-and-Example.md' destination=''/>
     <templateFile source='tests\Module.Tests.ps1' destination='tests\${PLASTER_PARAM_ModuleName}.Tests.ps1'/>
-    <file source='Module.psm1' destination='${PLASTER_PARAM_ModuleName}.psm1'/>
-    <templateFile source='Module.psd1' destination='${PLASTER_PARAM_ModuleName}.psd1'/>
   </content>
 </plasterManifest>
