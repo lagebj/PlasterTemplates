@@ -32,6 +32,7 @@
     <file source='' destination='scripts\private'/>
     <file source='' destination='scripts\public'/>
     <file source='' destination='tests'/>
+    <file source='' destination='tests\output'/>
     <message>
       Deploying files
     </message>
