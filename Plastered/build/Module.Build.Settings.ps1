@@ -15,8 +15,8 @@ Properties {
 
     # The name of your module should match the basename of the PSD1 file.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
-    $ModuleName = Get-Item $SrcRootDir/*.psd1 |
-    Where-Object { $null -ne (Test-ModuleManifest -Path $_ -ErrorAction SilentlyContinue) } |
+    $ModuleName = Get-Item "$SrcRootDir\*.psd1" |
+        Where-Object {$null -ne (Test-ModuleManifest -Path $_ -ErrorAction SilentlyContinue)} |
         Select-Object -First 1 |
         Foreach-Object BaseName
 
@@ -31,7 +31,7 @@ Properties {
     $UpdatableHelpOutDir = "$OutDir\UpdatableHelp"
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
-    $SharedProperties = @{ }
+    $SharedProperties = @{}
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
     $LineSep = "-" * 78
@@ -39,7 +39,7 @@ Properties {
     # The local installation directory for the install task. Defaults to your home Modules location.
     # The test for $profile is for the Plaster AppVeyor build machine since it doesn't define $profile.
     [System.Diagnostics.CodeAnalysis.SuppressMessage('PSUseDeclaredVarsMoreThanAssigments', '')]
-    $InstallPath = Join-Path (Split-Path $(if ($profile) { $profile } else { $Home }) -Parent) `
+    $InstallPath = Join-Path (Split-Path $(if ($profile) {$profile} else {$Home}) -Parent) `
         "Modules\$ModuleName\$((Test-ModuleManifest -Path $SrcRootDir\$ModuleName.psd1).Version.ToString())"
 
     # Default Locale used for help generation, defaults to en-US.
