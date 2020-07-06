@@ -8,7 +8,7 @@
     GUID              = '<%= $PLASTER_Guid1 %>'
     Author            = '<%= $PLASTER_PARAM_FullName %>'
     CompanyName       = ''
-    Copyright         = '(c) 2019 <%= $PLASTER_PARAM_FullName %>. All rights reserved.'
+    Copyright         = '(c) 2020 <%= $PLASTER_PARAM_FullName %>. All rights reserved.'
     Description       = '<%= $PLASTER_PARAM_Description %>'
     FunctionsToExport = @()
     CmdletsToExport   = @()

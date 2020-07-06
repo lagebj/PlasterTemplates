@@ -5,5 +5,5 @@ pages:
   - Home: index.md
   - <%= $PLASTER_PARAM_ModuleName %> Basics:
     - What is <%= $PLASTER_PARAM_ModuleName %>: about.md
-    - Quick Start: Quick-Start-Installation-and-Example.md
+    - Quick Start: quick-start.md
   - Acknowledgements: acknowledgements.md
