@@ -20,9 +20,7 @@
     <parameter name="GitHubRepo" type="text" prompt="Github repo name for this module" default="${PLASTER_PARAM_ModuleName}"/>
   </parameters>
   <content>
-    <message>
-      Creating folder structure
-    </message>
+    <message>Creating folder structure</message>
     <file source='' destination='.vscode'/>
     <file source='' destination='build'/>
     <file source='' destination='classes'/>
@@ -33,9 +31,7 @@
     <file source='' destination='scripts\public'/>
     <file source='' destination='tests'/>
     <file source='' destination='tests\output'/>
-    <message>
-      Deploying files
-    </message>
+    <message>Deploying files</message>
     <file source='.gitignore' destination=''/>
     <templateFile source='appveyor.yml' destination=''/>
     <templateFile source='LICENSE' destination=''/>
@@ -50,11 +46,11 @@
     <templateFile source='build\Invoke-Build.ps1' destination=''/>
     <templateFile source='build\Module.Build.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.ps1'/>
     <templateFile source='build\Module.Build.Settings.ps1' destination='build\${PLASTER_PARAM_ModuleName}.Build.Settings.ps1'/>
-	  <file source='build\ScriptAnalyzerSettings.psd1' destination=''/>
+    <file source='build\ScriptAnalyzerSettings.psd1' destination=''/>
     <templateFile source='docs\about.md' destination=''/>
     <templateFile source='docs\acknowledgements.md' destination=''/>
     <templateFile source='docs\index.md' destination=''/>
-    <templateFile source='docs\Quick-Start-Installation-and-Example.md' destination=''/>
+    <templateFile source='docs\quick-start.md' destination=''/>
     <templateFile source='tests\Module.Tests.ps1' destination='tests\${PLASTER_PARAM_ModuleName}.Tests.ps1'/>
   </content>
 </plasterManifest>
